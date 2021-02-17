@@ -1,6 +1,5 @@
 package tianjin.geektime.design.pattern.Article_14;
 
-import com.sun.org.apache.regexp.internal.RE;
 
 import java.util.Map;
 

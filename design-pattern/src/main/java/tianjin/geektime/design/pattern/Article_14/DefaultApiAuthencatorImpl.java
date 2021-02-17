@@ -2,12 +2,11 @@ package tianjin.geektime.design.pattern.Article_14;
 
 import java.util.HashMap;
 
-import static com.sun.deploy.perf.DeployPerfUtil.put;
 
 /**
  * Created by tianjin on 2021/1/2.
  */
-public class DefaultApiAuthencatorImpl implements ApiAuthencator{
+public class DefaultApiAuthencatorImpl implements ApiAuthencator {
 
     private CredentialStorage credentialStorage;
 
@@ -38,12 +37,12 @@ public class DefaultApiAuthencatorImpl implements ApiAuthencator{
         String originUrl = apiRequest.getBaseUrl();
 
         AuthToken clientAuthToken = new AuthToken(token, timestamp);
-        if(clientAuthToken.isExpired()){
+        if (clientAuthToken.isExpired()) {
             throw new RuntimeException("token expired");
         }
         String password = credentialStorage.getPasswordByAppId(appId);
         AuthToken serverAuthToken = AuthToken.create(originUrl, timestamp, new HashMap<>());
-        if(!serverAuthToken.match(clientAuthToken)){
+        if (!serverAuthToken.match(clientAuthToken)) {
             throw new RuntimeException("token invalid");
         }
     }

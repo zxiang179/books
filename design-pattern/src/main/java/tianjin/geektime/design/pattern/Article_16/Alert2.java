@@ -87,4 +87,7 @@ class ApiStatInfo {
     private long errorCount;
     // todo 新增属性timeoutCount 改动1
     private long durationOfSeconds;
+
+    public ApiStatInfo() {
+    }
 }
