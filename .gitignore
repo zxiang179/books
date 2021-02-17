@@ -1,0 +1,18 @@
+# idea
+.idea/
+*.iml
+
+# MacOS
+.DS_Store
+
+# gradle
+.gradle/
+gradle/
+build/
+
+# java
+classes/
+out/
+submodules/
+*.jar
+logs/
